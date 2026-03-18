@@ -2,5 +2,17 @@
 /robots.txt    /robots.txt    200
 /sitemap.xml   /sitemap.xml   200
 
+# Fix bogus nested /work/work/ and /blog/work/ paths — 301 redirect to correct URL
+/work/work/supernova              /work/supernova              301
+/work/work/union-camp             /work/union-camp             301
+/work/work/student-life-fair      /work/student-life-fair      301
+/work/work/freshman-welfare-gift  /work/freshman-welfare-gift  301
+/work/work/freshman               /freshman                    301
+/work/work/work/*                 /work/:splat                 301
+/blog/work/supernova              /work/supernova              301
+/blog/work/student-life-fair      /work/student-life-fair      301
+/blog/work/freshman-welfare-gift  /work/freshman-welfare-gift  301
+/blog/work/*                      /work/:splat                 301
+
 # SPA fallback — all other routes serve index.html
 /*    /index.html   200
